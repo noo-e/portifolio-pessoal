@@ -1,0 +1,54 @@
+@font-face {
+    font-family: modeseven;
+    src: url(../fonts/modes.ttf) format('truetype');
+}
+.index {
+    background-image: url(../img/fundo-ruído.png)
+}
+
+.navbar {
+    box-sizing: border-box;
+
+    position: absolute;
+    width: 100%;
+    height: 11%;
+    left: 0px;
+    top: 0px;
+
+    background: rgba(4, 4, 4, 0.69);
+    border-bottom: 3px solid #6E3A18;
+}
+
+.navbar .links {
+    position: absolute;
+    left: 50%;
+    margin-top: 20px;
+    justify-content: right;
+}
+
+.navbar a {
+    text-decoration: none;
+    font-family: 'modeseven';
+    color: #FFFFFF;
+    font-size: 1.7em;
+    padding: 20px 35px;
+
+}
+
+.navbar a:hover {
+    color: #000000;
+    background-color: #FFFFFF;
+    transition: 400ms;
+}
+
+
+.farol img {
+    box-sizing: border-box;
+
+    position: absolute;
+    width: 20vw;
+    height: 80vh;
+    left: 75%;
+    top: 141px;
+
+}
