@@ -2,8 +2,21 @@
     font-family: modeseven;
     src: url(../fonts/modes.ttf) format('truetype');
 }
-.index {
-    background-image: url(../img/fundo-ruído.png)
+
+:root {
+    font-family: 'modeseven';
+    color: #FFFFFF;
+}
+
+body {
+    margin: 0;
+}
+
+#index, .projetos {
+    position: absolute;
+    background-image: url(../img/fundo-ruído.png);
+    width: 100%;
+    height: 100%;
 }
 
 .navbar {
@@ -30,7 +43,7 @@
     text-decoration: none;
     font-family: 'modeseven';
     color: #FFFFFF;
-    font-size: 1.7em;
+    font-size: 1.7vw;
     padding: 20px 35px;
 
 }
@@ -49,6 +62,284 @@
     width: 20vw;
     height: 80vh;
     left: 75%;
-    top: 141px;
+    bottom: 0px;
 
+}
+
+#ave {
+    position: absolute;
+    right: 14vw;
+    bottom: 3vh;
+
+    width: 263px;
+    height: 228px;
+}
+
+.apresentacao img {
+    position: absolute;
+    width: 50vw;
+    
+    left: 10vw;
+    top: 15vh;
+}
+
+.apresentacao h1 {
+    position: absolute;
+    width: 590px;
+    left: 19vw;
+    top: 35vh;
+
+    color: #FFFFFF;
+    font-family: 'modeseven';
+    
+}
+
+.apresentacao p {
+    position: absolute;
+    width: 500px;
+    left: 19vw;
+    top: 47vh;
+
+    color: #FFFFFF;
+    font-family: 'modeseven';
+    font-size: 2vw;
+}
+
+.apresentacao p #nome {
+    color: inherit;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 3.5vw;
+}
+
+.apresentacao p #nome:hover {
+    color: #000000;
+    -webkit-text-stroke: 1px #D35300;
+}
+
+
+.apresentacao p #curso {
+    position: relative;
+    margin-top: 50px;
+    line-height: 0px;
+}
+
+#sobre-mim, #contato {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+
+    background-image: url(../img/fundo-ruído2.jpg);
+}
+
+#foto {
+    box-sizing: border-box;
+
+    position: absolute;
+    width: 238px;
+    height: 292px;
+    left: 82px;
+    top: 210px;
+
+    border: 7px solid #FFFFFF;
+
+}
+
+#sobre-mim h1 {
+    position: absolute;
+    left: 378px;
+    top: 110px;
+
+    color: #D35300;
+    font-size: 3vw;
+
+}
+
+#sobre-mim .paragrafo1 {
+    position: absolute;
+    left: 378px;
+    top: 185px;
+
+    width: 500px;
+    height: 292px;
+
+    text-align: justify;
+    font-size: 1.4vw;
+    font-weight: normal;
+    line-height: 3.2vh;
+}
+
+#sobre-mim .paragrafo2 {
+    position: absolute;
+    left: 960px;
+    top: 185px;
+
+    width: 500px;
+    height: 292px;
+
+    text-align: justify;
+    font-size: 1.4vw;
+    font-weight: 300;
+    line-height: 3.2vh;
+}
+
+#gradiente {
+    box-sizing: border-box;
+
+    position: absolute;
+    width: 60%;
+    height: 7%;
+    left: 78px;
+    bottom: 40px;
+
+    background: linear-gradient(270deg, rgba(255, 98, 0, 0.67) 0%, rgba(217, 217, 217, 0) 100%);
+    mix-blend-mode: screen;
+    border: 2px solid #261C1C;
+}
+
+#molécula {
+    position: absolute;
+    bottom: 0px;
+    right: 40px;
+
+    opacity: 0.35;
+}
+
+
+#form {
+    box-sizing: border-box;
+
+    width:50%;
+    height: 80%;
+    position: absolute;
+    top: 56%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    
+    border: 2px solid #FFFFFF;
+    border-radius: 25px;
+}
+
+#form h1, textarea {
+    margin-top: 40px;
+    margin-left: 40px;
+
+    background-color: transparent;
+
+    font-family: inherit;
+    color: inherit;
+    width: 44vw;
+}
+#form textarea {
+    font-size: 1.2vw;
+}
+
+#form form button {
+    position: absolute;
+    left: 44%;
+    top: 54%;
+
+    background-color: transparent;
+    border: 1px solid #FFFFFF;
+    border-radius: 5px;
+    padding: 10px;
+
+    color: inherit;
+    font-family: inherit;
+    font-size: 1.2vw;
+
+    cursor: pointer;
+}
+
+#form form button:hover {
+    background-color: #FFFFFF;
+    color: #000000;
+    transition: 300ms;
+}
+
+.redes-sociais {
+    position: absolute;
+    left: 14%;
+    top: 80%;
+}
+
+
+.redes-sociais a {
+    text-decoration: none;
+    margin-left: 70px;
+}
+
+.redes-sociais a img {
+    width: 50px;
+    height: 50px;
+}
+
+
+#mão {
+    position: absolute;
+    bottom: 0px;
+    left: 0px;
+}
+
+#mão-invertida {
+    position: absolute;
+    bottom: 0px;
+    right: 0px;
+    -webkit-transform: scaleX(-1);
+    transform: scaleX(-1);
+}
+
+.projetos img {
+    position: absolute;
+    left: 30%;
+    transform: translate(-50%, -50%);
+    transform: rotate(90deg);
+    opacity: 0.1;
+
+    width: 39%;
+}
+
+.grade-projetos {
+    width: 80vw;
+    display: inline;
+    
+}
+
+.grade-projetos .moldura1, .moldura2, .moldura3{
+    position: absolute;
+    margin: 10px;
+    width: 270px;
+    height: 300px;
+
+    border: 1px solid #FFFFFF;
+    text-align: justify;
+    padding: 10px;
+}
+
+.moldura1 {
+    left: 8vw;
+    top: 30vh;
+}
+
+.moldura2 {
+    left: 40vw;
+    top: 30vh;
+}
+
+.moldura3 {
+    left: 70vw;
+    top: 30vh;
+}
+
+.moldura1 a, .moldura2 a, .moldura3 a {
+    position: absolute;
+    bottom: 3vh;
+    text-decoration: none;
+    color: #D35300;
+}
+
+.projetos #disclaimer {
+    position: absolute;
+    bottom: 5vh;
+    margin-left: 50px;
 }
