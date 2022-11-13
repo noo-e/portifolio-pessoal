@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../static/styles/styles.css">
+    {% block title %}
+    <title>Document</title>
+    {% endblock %}
+</head>
+<body>
+    <header>
+        <div class="navbar">
+            <div class="links">
+                <a href="/">Inicio</a>
+                <a href="/sobre">Sobre Mim</a>
+                <a href="/projetos">Projetos</a>
+                <a href="/contato">Contato</a>
+            </div>
+        </div>
+    </header>
+    {% block content %}
+    {% endblock %}
+</body>
+</html>

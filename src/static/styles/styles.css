@@ -1,3 +1,7 @@
+*, *::after, *::before {
+    box-sizing: border-box;
+}
+
 @font-face {
     font-family: modeseven;
     src: url(../fonts/modes.ttf) format('truetype');
@@ -6,198 +10,170 @@
 :root {
     font-family: 'modeseven';
     color: #FFFFFF;
+    font-size: 12px;
 }
 
 body {
     margin: 0;
-}
-
-#index, .projetos {
-    position: absolute;
     background-image: url(../img/fundo-ruído.png);
-    width: 100%;
-    height: 100%;
+
 }
 
+/********************** NAVBAR **************************/
 .navbar {
-    box-sizing: border-box;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
 
-    position: absolute;
     width: 100%;
-    height: 11%;
-    left: 0px;
-    top: 0px;
+    height: 8vh;
 
     background: rgba(4, 4, 4, 0.69);
     border-bottom: 3px solid #6E3A18;
 }
 
 .navbar .links {
-    position: absolute;
-    left: 49%;
-    margin-top: 20px;
-    justify-content: right;
+    display: flex;
+    
+    white-space: nowrap;
+    text-overflow: ellipsis;
 }
 
-.navbar a {
+.navbar .links a {
     text-decoration: none;
     font-family: 'modeseven';
     color: #FFFFFF;
-    font-size: 1.7vw;
+    font-size: 3.5vh;
     padding: 20px 35px;
 
 }
 
-.navbar a:hover {
+.navbar .links a:hover {
     color: #000000;
     background-color: #FFFFFF;
     transition: 400ms;
 }
 
+/********************** INDEX **************************/
+.apresentacao {
+    display: inline-block;
+    position: relative;
+    width: 40vw;
 
-.farol img {
-    box-sizing: border-box;
-
-    position: absolute;
-    width: 20vw;
-    height: 80vh;
-    left: 75%;
-    bottom: 0px;
-
-}
-
-#ave {
-    position: absolute;
-    right: 14vw;
-    bottom: 3vh;
-
-    width: 263px;
-    height: 228px;
+    margin: 8vh 0 0 8vw;
 }
 
 .apresentacao img {
-    position: absolute;
     width: 50vw;
-    
-    left: 10vw;
-    top: 15vh;
 }
 
-.apresentacao h1 {
+.texto-apresentacao {
     position: absolute;
-    width: 590px;
-    left: 19vw;
-    top: 35vh;
-
-    color: #FFFFFF;
-    font-family: 'modeseven';
-    
+    top: 20%;
+    left: 20%;
 }
 
-.apresentacao p {
-    position: absolute;
-    width: 500px;
-    left: 19vw;
-    top: 47vh;
-
-    color: #FFFFFF;
-    font-family: 'modeseven';
-    font-size: 2vw;
+.texto-apresentacao h1 {
+    font-size: 2.2vw;
 }
 
-.apresentacao p #nome {
+.texto-apresentacao p {
+    font-size: 2.5vw;
+}
+
+.texto-apresentacao p #nome, #nome:visited {
     color: inherit;
     text-decoration: none;
     font-weight: bold;
     font-size: 3.5vw;
 }
 
-.apresentacao p #nome:hover {
+.texto-apresentacao p #nome:hover {
     color: #000000;
     -webkit-text-stroke: 1px #D35300;
 }
 
-
-.apresentacao p #curso {
-    position: relative;
-    margin-top: 50px;
-    line-height: 0px;
+.texto-apresentacao #curso {
+    font-size: 1.5vw
 }
 
-#sobre-mim, #contato {
+.farol {
+
     position: absolute;
-    width: 100%;
-    height: 100%;
+    width: 20vw;
+    height: auto;
 
-    background-image: url(../img/fundo-ruído2.jpg);
+    right: 0;
+    bottom: 0;
 }
 
+.passaro {
+    position: absolute;
+    right: 10vw;
+    bottom: 3vh;
+
+    width: 16vw;
+    height: auto;
+}
+
+/********************** SOBRE MIM **************************/
 #foto {
-    box-sizing: border-box;
 
-    position: absolute;
-    width: 238px;
-    height: 292px;
-    left: 82px;
-    top: 210px;
-
-    border: 7px solid #FFFFFF;
+    width: 15vw;
+    height: auto;
+    
+    margin: 0 0 0 4vw;
+    border: 1px solid #FFFFFF;
 
 }
 
-#sobre-mim h1 {
-    position: absolute;
-    left: 378px;
-    top: 110px;
-
+.sobre-titulo {
     color: #D35300;
-    font-size: 3vw;
+    font-size: 3.5rem;
 
+    float: top;
+    margin: 10vh 0 0 21vw;
 }
 
-#sobre-mim .paragrafo1 {
+.sobre-texto {
     position: absolute;
-    left: 378px;
-    top: 185px;
+    left: 21vw;
+    top: 21vh;
+    margin-top: 1vh;
 
-    width: 500px;
-    height: 292px;
+    display: flex; 
+    
+}
 
-    text-align: justify;
-    font-size: 1.4vw;
+.sobre-texto .paragrafo {
+    display: flex;
+
+    font-size: 1.75rem;
     font-weight: normal;
-    line-height: 3.2vh;
+    line-height: 4vh;
+
+    margin-right: 2.5vw;
 }
 
-#sobre-mim .paragrafo2 {
-    position: absolute;
-    left: 960px;
-    top: 185px;
-
-    width: 500px;
-    height: 292px;
-
+.sobre-texto .paragrafo p {
     text-align: justify;
-    font-size: 1.4vw;
-    font-weight: 300;
-    line-height: 3.2vh;
 }
 
 #gradiente {
-    box-sizing: border-box;
 
     position: absolute;
-    width: 60%;
-    height: 7%;
-    left: 78px;
-    bottom: 40px;
+    width: 60vw;
+    height: 7vh;
+    left: 4vw;
+    bottom: 5vh;
+    
 
     background: linear-gradient(270deg, rgba(255, 98, 0, 0.67) 0%, rgba(217, 217, 217, 0) 100%);
     mix-blend-mode: screen;
     border: 2px solid #261C1C;
 }
 
-#molécula {
+.molecula {
     position: absolute;
     bottom: 0px;
     right: 40px;
@@ -205,9 +181,8 @@ body {
     opacity: 0.35;
 }
 
-
+/********************** CONTATOS **************************/
 #form {
-    box-sizing: border-box;
 
     width:50%;
     height: 80%;

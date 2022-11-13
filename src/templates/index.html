@@ -1,36 +1,16 @@
-<!DOCTYPE html>
-<html lang="pt-br">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../static/styles/styles.css">
-    <title>Portifólio | Vinicius Laranjeiro</title>
-</head>
-<body>
-    <div id="index">
-        <header>
-            <div class="navbar">
-                <div class="links">
-                    <a href="index.html">Início</a>
-                    <a href="sobre-mim.html">Sobre Mim</a>
-                    <a href="projetos.html">Projetos</a>
-                    <a href="contato.html">Contato</a>
-                </div>
-            </div>
-        </header>
-        <div class="farol">
-            <img src="../static/img/farol.png" alt="farol-bitmap">
-        </div>
-        <img id="ave" src="../static/img/pássaros.png" alt="passaros-bitmap">
-        <div class="apresentacao">
-            <img src="../static/img/moldura-pixel.png" alt="moldura apresentação">
+{% extends 'base.html' %}
+{% block title %} <title>Portifólio | Vinicius Laranjeiro</title> {% endblock %}
+{% block content %}
+    <figure class="apresentacao">
+        <img src="../static/img/moldura-pixel.png" alt="">
+        <figcaption class="texto-apresentacao">
             <h1 id="bem-vindo"> Ola, seja bem-vindo(a)</h1> <br>
             <p>
-                Eu sou o <a href="sobre-mim.html" id="nome">Vinicius</a> <br>
+                Eu sou o <a href="/sobremim" id="nome">Vinicius</a> <br>
                 <span id="curso">Estudante de Desenvolvimento de Software</span>
             </p>
-        </div>
-    </div>
-</body>
-</html>
+        </figcaption>
+    </figure>
+    <img src="../static/img/farol.png" alt="farol em bitmap" class="farol">
+    <img src="../static/img/pássaros.png" alt="pássaros em bitmap" class="passaro">
+{% endblock %}
