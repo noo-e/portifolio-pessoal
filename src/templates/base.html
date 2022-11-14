@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../static/styles/styles.css">
+    <link rel="icon" href="../static/img/icone-seta.png">
     {% block title %}
     <title>Document</title>
     {% endblock %}
@@ -12,7 +13,10 @@
 <body>
     <header>
         <div class="navbar">
-            <div class="links">
+            <div>
+                <img src="../static/img/menu.png" alt="icone menu" onclick="clickMenu()">
+            </div>
+            <div class="links" id="menu">
                 <a href="/">Inicio</a>
                 <a href="/sobre">Sobre Mim</a>
                 <a href="/projetos">Projetos</a>
@@ -22,5 +26,19 @@
     </header>
     {% block content %}
     {% endblock %}
+    <script>
+        function clickMenu() {
+            let tamanhoTela = window.matchMedia("(max-width:665px)");
+            if (tamanhoTela.matches) {
+                if (menu.style.display == 'none') {
+                    menu.style.display = 'flex'
+                } else {
+                    menu.style.display = 'none'
+                }
+                } else {
+                    tamanhoTela.removeListener();
+                }
+            }
+    </script>
 </body>
 </html>

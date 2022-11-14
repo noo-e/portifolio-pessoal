@@ -1,47 +1,35 @@
-<!DOCTYPE html>
-<html lang="pt">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../static/styles/styles.css">
-    <title>Contato | Vinicius Laranjeiro</title>
-</head>
-<body>
-    <div id="contato">
-        <header>
-            <div class="navbar">
-                <div class="links">
-                    <a href="index.html">Início</a>
-                    <a href="sobre-mim.html">Sobre Mim</a>
-                    <a href="projetos.html">Projetos</a>
-                    <a href="contato.html">Contato</a>
-                </div>
-            </div>
-        </header>
-        <div id="form">
-            <h1>Entre em contato comigo</h1>
-            <form action="">
-                <textarea name="" id="" cols="30" rows="8"></textarea>
-                <button>Enviar</button>
-            </form>
-            <div class="redes-sociais">
-                <a href="https://github.com/noo-e" target="_blank">
-                    <img src="../static/img/github.png" alt="ícone do github">
-                </a>
-                <a href="https://linkedin.com" target="_blank">
-                    <img src="../static/img/linkedin.png" alt="ícone do linkedin">
-                </a>
-                <a href="https://twitter.com/yinisoa" target="_blank">
-                    <img src="../static/img/twitter.png" alt="ícone do twitter">
-                </a>
-                <a href="https://www.reddit.com/user/cheetosverao" target="_blank">
-                    <img src="../static/img/reddit.png" alt="ícone do reddit">
-                </a>
-            </div>
-        </div>
-        <img src="../static/img/mão.png" alt="mão-bitmap" id="mão">
-        <img src="../static/img/mão.png" alt="mão-bitmap" id="mão-invertida">
+{% extends 'base.html' %}
+{% block title %} <title>Contato | Vinicius Laranjeiro</title> {% endblock %}
+{% block content %}
+<div class="contatos">
+    <div style="align-self: flex-start">
+        <h1>Entre em contato comigo</h1>
     </div>
-</body>
-</html>
+    <div>
+        <form action="">
+            <textarea name="" id="" cols="30" rows="8"></textarea>
+        </form>
+    </div>
+    <div>
+        <button>Enviar</button> 
+    </div>
+    <div class="redes-sociais">
+        <a href="https://github.com/noo-e" target="_blank">
+            <img src="../static/img/github.png" alt="ícone do github">
+        </a>
+        <a href="https://linkedin.com" target="_blank">
+            <img src="../static/img/linkedin.png" alt="ícone do linkedin">
+        </a>
+        <a href="https://twitter.com/yinisoa" target="_blank">
+            <img src="../static/img/twitter.png" alt="ícone do twitter">
+        </a>
+        <a href="https://www.reddit.com/user/cheetosverao" target="_blank">
+            <img src="../static/img/reddit.png" alt="ícone do reddit">
+        </a>
+    </div>
+
+</div>
+<img src="../static/img/mão.png" alt="mão-bitmap" id="mão">
+<img src="../static/img/mão.png" alt="mão-bitmap" id="mão-invertida">
+</div>
+{% endblock %}

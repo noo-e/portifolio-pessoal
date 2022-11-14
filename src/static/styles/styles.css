@@ -124,6 +124,7 @@ body {
     
     margin: 0 0 0 4vw;
     border: 1px solid #FFFFFF;
+    display: block;
 
 }
 
@@ -146,8 +147,7 @@ body {
 }
 
 .sobre-texto .paragrafo {
-    display: flex;
-
+    
     font-size: 1.75rem;
     font-weight: normal;
     line-height: 4vh;
@@ -182,73 +182,73 @@ body {
 }
 
 /********************** CONTATOS **************************/
-#form {
+.contatos {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 
-    width:50%;
-    height: 80%;
-    position: absolute;
-    top: 56%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    
-    border: 2px solid #FFFFFF;
-    border-radius: 25px;
+    width: 60vw;
+
+    margin: 10vh 20vw 0 20vw;
+    padding: 20px;
+
+    border: 3px solid white;
+    border-radius: 10px;
 }
 
-#form h1, textarea {
-    margin-top: 40px;
-    margin-left: 40px;
+.contatos h1 {
+    margin-left: 8.5vw;
+    margin-right: 8.5vw;
+}
 
+.contatos textarea {
+    width: 40vw;
+    height: 30vh;
     background-color: transparent;
 
-    font-family: inherit;
-    color: inherit;
-    width: 44vw;
-}
-#form textarea {
-    font-size: 1.2vw;
+    color: #FFFFFF;
+    font-size: 1.5rem;
 }
 
-#form form button {
-    position: absolute;
-    left: 44%;
-    top: 54%;
-
-    background-color: transparent;
-    border: 1px solid #FFFFFF;
-    border-radius: 5px;
+.contatos button {
+    margin-top: 2vh;
+    margin-bottom: 5vh;
     padding: 10px;
 
+    background-color: transparent;
     color: inherit;
     font-family: inherit;
-    font-size: 1.2vw;
-
+    font-size: 1.5rem;
     cursor: pointer;
+
+    border: 1px solid #FFFFFF;
+    border-radius: 10px;
 }
 
-#form form button:hover {
+.contatos button:hover {
+    color: black;
     background-color: #FFFFFF;
-    color: #000000;
     transition: 300ms;
 }
 
-.redes-sociais {
-    position: absolute;
-    left: 14%;
-    top: 80%;
+.contatos .redes-sociais {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+
+    width: 40vw;
+
 }
 
-
-.redes-sociais a {
-    text-decoration: none;
-    margin-left: 70px;
+.contatos .redes-sociais a {
+    margin: 0 5px 20px 5px;
 }
 
-.redes-sociais a img {
+.contatos .redes-sociais img {
     width: 50px;
-    height: 50px;
+    height: auto;
 }
-
 
 #mão {
     position: absolute;
@@ -264,6 +264,7 @@ body {
     transform: scaleX(-1);
 }
 
+/********************** PROJETOS **************************/
 .projetos img {
     position: absolute;
     left: 30%;
@@ -275,46 +276,232 @@ body {
 }
 
 .grade-projetos {
-    width: 80vw;
-    display: inline;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
+    margin: 10vh 10vw 10vh 10vw;
+}
+
+.projeto {
+    position: relative;
+    width: 300px;
+    height: 400px;
+    border: 1px solid #FFFFFF;
+
+    padding: 20px;
+    margin: 10px;
     
 }
 
-.grade-projetos .moldura1, .moldura2, .moldura3{
-    position: absolute;
-    margin: 10px;
-    width: 270px;
-    height: 300px;
-
-    border: 1px solid #FFFFFF;
-    text-align: justify;
-    padding: 10px;
-}
-
-.moldura1 {
-    left: 8vw;
-    top: 30vh;
-}
-
-.moldura2 {
-    left: 40vw;
-    top: 30vh;
-}
-
-.moldura3 {
-    left: 70vw;
-    top: 30vh;
-}
-
-.moldura1 a, .moldura2 a, .moldura3 a {
-    position: absolute;
-    bottom: 3vh;
-    text-decoration: none;
+.projeto h2 {
+    font-size: 2rem;
     color: #D35300;
 }
 
-.projetos #disclaimer {
-    position: absolute;
-    bottom: 5vh;
-    margin-left: 50px;
+.projeto p {
+    text-align: justify;
+    font-size: 1.25rem;
 }
+
+.projeto a {
+    position: absolute;
+    bottom: 20px;
+
+    font-size: 1.25rem;
+    color: #D35300;
+}
+
+#disclaimer {
+    font-size: 2rem;
+    margin: 7vh 0 0 5vw;
+}
+
+/********************** RESPONSIVIDADE **************************/
+@media screen and (max-width: 1250px) {
+/************ CONTATOS **************/
+    #mão, #mão-invertida {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 1056px) {
+/************ SOBRE MIM **************/
+    #gradiente {
+        display: none;
+    }
+
+    .sobre-texto {
+        flex-direction: column;
+    }
+}
+
+@media screen and (max-width: 1025px) {
+    #foto {
+        position: absolute;
+        display: inline-block;
+        margin: 0 0 0 36.5vw;
+        width: 200px;
+    }
+
+    .sobre-titulo {
+        margin: 8vh 35vw;
+    }
+
+    .sobre-texto {
+        margin-top: 55vh;
+        margin-right: 10vw;
+        left: 10vw;
+        top: 21vh;
+    }
+
+    .molecula {
+        right: 0;
+    }
+}
+
+@media screen and (max-width: 768px) {
+/************ INDEX **************/
+    .apresentacao {
+        width: 60vw;
+    }
+    
+    .apresentacao img {
+        width: 70vw;
+    }
+    
+    
+    .texto-apresentacao h1 {
+        font-size: 3vw;
+    }
+    
+    .texto-apresentacao p {
+        font-size: 3.2vw;
+    }
+    
+    .texto-apresentacao p #nome, #nome:visited {
+        font-size: 4.3vw;
+    }
+    
+    .texto-apresentacao #curso {
+        font-size: 2.3vw
+    } 
+}
+
+@media screen and (max-width: 756px) {
+    .sobre-titulo {
+        margin-left: 35vw;
+        margin-right: 30vw;
+}
+}
+
+@media screen and (min-width: 666px) {
+/************ NAVBAR **************/
+    .navbar img {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 665px) {
+/************ NAVBAR **************/
+    .navbar {
+        width: 100%;
+        height: auto;
+        flex-direction: column;
+        align-items: flex-end;
+        margin-bottom: 2vh;
+    }
+
+    .navbar img {
+        width: 40px;
+        height: 40px;
+        margin: 10px;
+    }
+
+    .navbar .links {
+        display: none;
+        width: 100%;
+        flex-direction: column;
+        align-items: flex-end;
+    }
+/************ SOBRE MIM **************/
+    .sobre-titulo {
+        margin-left: 32vw;
+        margin-right: 0;
+    }
+
+    #foto {
+        margin-left: 33.5vw;
+    }
+
+    .molecula {
+        display: none;
+    }
+
+}
+    
+@media screen and (max-width: 426px) {
+/************ INDEX **************/
+    .apresentacao {
+        width: 100vw;
+        margin: 5vh 0 5vh 0;
+    }
+
+    .apresentacao img {
+        display: none;
+    }
+
+    .texto-apresentacao {
+        position: absolute;
+        left: 10vw;
+    }
+
+    .texto-apresentacao h1 {
+        font-size: 2rem;
+    }
+    
+    .texto-apresentacao p {
+        font-size: 2rem;
+    }
+    
+    .texto-apresentacao p #nome, #nome:visited {
+        font-size: 2rem;
+    }
+    
+    .texto-apresentacao #curso {
+        font-size: 1.5rem
+    }
+
+    .farol {
+        display: none;
+    }
+
+    .passaro {
+        position: absolute;
+        right: 5vw;
+        bottom: 10vh;
+
+        width: 300px;
+        height: auto;
+    }
+/************ SOBRE MIM **************/
+    .sobre-titulo {
+        margin-right: 0;
+        margin-left: 22.5vw;
+    }
+
+    #foto {
+        margin-left: 26vw
+    }
+}
+
+@media screen and (max-width: 320px) {
+    .sobre-titulo {
+        margin-right: 0;
+        margin-left: 13.5vw;
+    }
+
+    #foto {
+        margin-left: 18vw
+    }
+}
+
