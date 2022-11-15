@@ -18,13 +18,5 @@ def projetos():
 def contatos():
     return render_template('contato.html')
 
-@app.route('/teste')
-def teste():
-    return render_template('teste.html')
-
-@app.route('/base')
-def base():
-    return render_template('base.html')
-
 if __name__ == '__main__':
     app.run(debug = True)
