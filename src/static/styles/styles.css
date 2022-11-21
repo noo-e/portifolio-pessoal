@@ -126,6 +126,8 @@ body {
     border: 1px solid #FFFFFF;
     display: block;
 
+    filter: grayscale(20%);
+
 }
 
 .sobre-titulo {
