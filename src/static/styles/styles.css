@@ -71,6 +71,7 @@ body {
     position: absolute;
     top: 20%;
     left: 20%;
+    line-height: 1;
 }
 
 .texto-apresentacao h1 {
@@ -78,6 +79,8 @@ body {
 }
 
 .texto-apresentacao p {
+
+    margin: 0;
     font-size: 2.5vw;
 }
 
@@ -94,6 +97,7 @@ body {
 }
 
 .texto-apresentacao #curso {
+    line-height: 0;
     font-size: 1.5vw
 }
 
@@ -150,7 +154,7 @@ body {
 
 .sobre-texto .paragrafo {
     
-    font-size: 1.75rem;
+    font-size: 2rem;
     font-weight: normal;
     line-height: 4vh;
 
@@ -201,6 +205,8 @@ body {
 .contatos h1 {
     margin-left: 8.5vw;
     margin-right: 8.5vw;
+
+    font-size: 3rem;
 }
 
 .contatos textarea {
@@ -225,6 +231,9 @@ body {
 
     border: 1px solid #FFFFFF;
     border-radius: 10px;
+
+    display: flex;
+    align-items: center;
 }
 
 .contatos button:hover {

@@ -18,5 +18,6 @@ def projetos():
 def contatos():
     return render_template('contato.html')
 
+
 if __name__ == '__main__':
     app.run(debug = True)
