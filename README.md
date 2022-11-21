@@ -8,15 +8,15 @@ Projeto da matéria de Design Digital, 1º semestre do curso de Desenvolvimento 
 ```
 python -m venv nomedoambiente
 ```
-1. Ative o ambiente virtual
+3. Ative o ambiente virtual
 ```
 nomedoambiente/Scripts/activate
 ```
-1. Instale as dependências do projeto
+4. Instale as dependências do projeto
 ```
 pip install -r requirements.txt
 ```
-1. Acesse a pasta src e execute a aplicação
+5. Acesse a pasta src e execute a aplicação
 ```
 cd src
 python app.py
