@@ -209,37 +209,16 @@ body {
     font-size: 3rem;
 }
 
-.contatos textarea {
-    width: 40vw;
-    height: 30vh;
-    background-color: transparent;
-
-    color: #FFFFFF;
-    font-size: 1.5rem;
-}
-
-.contatos button {
-    margin-top: 2vh;
-    margin-bottom: 5vh;
-    padding: 10px;
-
-    background-color: transparent;
-    color: inherit;
-    font-family: inherit;
-    font-size: 1.5rem;
-    cursor: pointer;
-
-    border: 1px solid #FFFFFF;
-    border-radius: 10px;
-
+.contatos .email {
     display: flex;
-    align-items: center;
+    flex-direction: column;
+    margin: 10vh 0 10vh 0;
 }
 
-.contatos button:hover {
-    color: black;
-    background-color: #FFFFFF;
-    transition: 300ms;
+.contatos .email > p {
+    font-size: 3rem;
+    margin-top: 0.5vh;
+    word-break: break-all;
 }
 
 .contatos .redes-sociais {
